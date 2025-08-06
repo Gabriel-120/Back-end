@@ -14,9 +14,9 @@
          $num1 = 2.5;
          $str = strtoupper("olá mundo");
 
-            echo $num . "<br>";
-            echo $num1 . "<br>";
-            print $str . "<br>";
+            echo $num . "\n";
+            echo $num1 . "\n";
+            print $str . "\n";
 
     ?>
 
