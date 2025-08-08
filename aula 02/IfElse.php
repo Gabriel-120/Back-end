@@ -15,12 +15,16 @@
 
     <?php 
 
-        $nota1 = 0;
-        $nota2 = 0;
+        $nome = (string) readline("Digite o nome do aluno: ");
+        
+        $nota1 = (Float) readline("Digite a primeira nota do aluno: ");
+
+        $nota2 = (float) readline("Digite a segunda nota do aluno: ");
+
         $media = ($nota2 + $nota1) / 2;
         
-        $presenca = 0; // Presença em porcentagem
-        $nome = "Enzo Enrico";
+        $presenca = (int) readline("Digite a presença do aluno: "); // Presença em porcentagem
+        
 
         if ($media >= 7 && $presenca >= 75 || $nome == "Enzo Enrico") {
             echo "O Aluno: $nome foi aprovado com média: $media e presença: $presenca%\n";
