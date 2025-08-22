@@ -18,6 +18,14 @@ class Cachorro {
         $this->sexo = $sexo;
         $this->castrado = $castrado;
     }
+
+    public function latir() {
+        echo "O chachorro $this->nome está latindo!";
+    }
+
+    public function marcandoTerritorio() {
+        echo "O cachorro $this->nome da raça $this->raca está marcando território.";
+    }
 }
 
 
@@ -62,6 +70,22 @@ class Usuario {
     $this ->endereco = $endereco;
     $this ->cep = $cep;
     }
+
+    public function testandoReservista() {
+        if ($this->sexo == "Masculino") {
+            echo "Apresente seu certificado de reservista do tiro de guerra!";
+        } else {
+            echo "Tudo certo";
+        }
+    }
+
+    public function casado($anos_casados) {
+        if ($this->estado_civil == "Casado") {
+            echo "Parabens pelo seu casamento de $anos_casados anos!";
+        } else {
+            echo "Oloko";
+        }
+    }
 }
 
 
@@ -74,3 +98,5 @@ $Usuario1 = new Usuario("Josenildo Afonso Souza", "100.200.300-40", "Masculino",
 $Usuario2 = new Usuario("Valentina Passos Scherrer", "070.070.060-70", "Feminino", "scherrer.valen@outlook.com", "Divorciada", "Iracemápolis", "São Paulo", "Avenida da saudade, 1942", "23456-24");
 
 $Usuario3 = new Usuario("Claudio Braz Nepumoceno", "575.575.242-32", "Masculino", "Clauclau.nepumoceno@gmail.com", "Solteiro", "Piripiri", "Piauí", "Estrada 3, 33", "12345-99");
+
+$Usuario1 -> casado(9);
