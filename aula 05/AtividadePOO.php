@@ -71,6 +71,8 @@ class Usuario {
     $this ->cep = $cep;
     }
 
+
+    // Reservista
     public function testandoReservista() {
         if ($this->sexo == "Masculino") {
             echo "Apresente seu certificado de reservista do tiro de guerra!";
@@ -79,6 +81,8 @@ class Usuario {
         }
     }
 
+
+    // Casados
     public function casado($anos_casados) {
         if ($this->estado_civil == "Casado") {
             echo "Parabens pelo seu casamento de $anos_casados anos!";
