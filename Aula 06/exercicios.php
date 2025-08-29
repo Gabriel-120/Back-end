@@ -1,6 +1,6 @@
 <?php 
 
-class produto{
+class produto1{
     public $nome;
     public $categoria;
     public $fornecedor;
@@ -8,21 +8,21 @@ class produto{
 }
 
 
-$bolacha1 = new produto();
+$bolacha1 = new produto1();
 $bolacha1 ->nome = "Nikito";
 $bolacha1 ->categoria = "Doces";
 $bolacha1 ->fornecedor = "Vitarella";
 $bolacha1 ->qtde_estoque = 220;
 
 
-$feijao1 = new produto();
+$feijao1 = new produto1();
 $feijao1 ->nome = "Oliron";
 $feijao1 ->categoria = "Mantimentos";
 $feijao1 ->fornecedor = "Reserva nobre";
 $feijao1 ->qtde_estoque = 123;
 
 
-$arroz1 = new produto();
+$arroz1 = new produto1();
 $arroz1 ->nome = "Prato fino";
 $arroz1 ->categoria = "Mantimentos";
 $arroz1 ->fornecedor = "PIRAHY Alimentos";
