@@ -88,7 +88,6 @@ class pessoa{
     }
 
 
-
     public static function criarViaTerminal() {
         $nome = readline("Digite o nome: ");
         $cpf = readline("Digite o CPF: ");
