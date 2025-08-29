@@ -92,18 +92,12 @@ class pessoa{
 
 
     public static function criarViaTerminal() {
-        echo "Digite o nome: ";
-        $nome = readline();
-        echo "Digite o CPF: ";
-        $cpf = readline();
-        echo "Digite o telefone: ";
-        $telefone = readline();
-        echo "Digite a idade: ";
-        $idade = readline();
-        echo "Digite o email: ";
-        $email = readline();
-        echo "Digite a senha: ";
-        $senha = readline();
+        $nome = readline("Digite o nome: ");
+        $cpf = readline("Digite o CPF: ");
+        $telefone = readline("Digite o telefone: ");
+        $idade = readline("Digite a idade: ");
+        $email = readline("Digite o email: ");
+        $senha = readline("Digite a senha: ");
 
         return new self($nome, $cpf, $telefone, $idade, $email, $senha);
     }
