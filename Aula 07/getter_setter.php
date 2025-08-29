@@ -8,7 +8,6 @@ class pessoa{
     private $email;
     private $senha;
 
-
     // public function __construct($nome, $cpf, $telefone, $idade, $email, $senha) {
     //     $this->nome = $nome;
     //     $this->cpf = $cpf;
@@ -77,7 +76,6 @@ class pessoa{
     public function setEmail($novoEmail) {
         $this->email = (string)$novoEmail;
     }
-
 
 
     // getter e setter para $senha
