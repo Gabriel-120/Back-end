@@ -66,9 +66,28 @@ class circulo implements forma {
     }
 }
 
+
+class pentagono implements forma{
+    private $lado;
+    private $apotemo;
+    
+
+    public function __construct($lado, $apotemo){
+        $this->lado = $lado;
+        $this->apotemo = $apotemo;
+    }
+
+    public function area(){
+        $perimetro = $this->lado * 5;
+        return ($perimetro * $this->apotemo) / 2;
+    }
+}
+
 $quadrado = new quadrado(readline("Dite o valor de um dos lados do quadrado: "));
 echo $quadrado->area();
 
-
 $circulo = new circulo(readline("\n Digite o valor do raio do circulo: "));
 echo $circulo->area();
+
+$pentagono = new pentagono(readline("Digite o valor de um dos lados do pentagono: "), readline("Digite o lavor do apotemo do pentagono"));
+echo $pentagono->area();
