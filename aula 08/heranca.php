@@ -40,7 +40,16 @@ class escola extends imovel{
 
     public function __construct($categoria, $N_comodos, $valor, $estado_conservacao, $seguimento){
         parent::__construct($categoria, $N_comodos, $valor, $estado_conservacao);
-
         $this->seguimento = $seguimento;
+    }
+}
+
+
+class comercio extends imovel{
+    private $tamanho;
+
+    public function __construct($categoria, $N_comodos, $valor, $estado_conservacao, $tamanho){
+        parent::__construct($categoria, $N_comodos, $valor, $estado_conservacao);
+        $this->tamanho = $tamanho;
     }
 }
