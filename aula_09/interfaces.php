@@ -30,6 +30,7 @@ class CartaoCredito implements pagamento {
 
 class pix implements pagamento {
     public function pagar($valor) {
+        echo "O pagamento foi feito via Pix no valor de: R$ $valor";
     }
 }
 
@@ -83,11 +84,27 @@ class pentagono implements forma{
     }
 }
 
+
+class hexagono implements forma{
+    private $lado;
+
+    public function __construct($lado){
+        $this->lado = $lado;
+    }
+
+    public function area() {
+        return ((3 * (sqrt(3)) * ($this->lado * $this->lado))/2);
+    }
+}
+
 $quadrado = new quadrado(readline("Dite o valor de um dos lados do quadrado: "));
-echo $quadrado->area();
+echo number_format($quadrado->area(), 2);
 
 $circulo = new circulo(readline("\n Digite o valor do raio do circulo: "));
-echo $circulo->area();
+echo number_format($circulo->area(), 2);
 
 $pentagono = new pentagono(readline("Digite o valor de um dos lados do pentagono: "), readline("Digite o lavor do apotemo do pentagono"));
-echo $pentagono->area();
+echo number_format($pentagono->area(), 2);
+
+$hexagono = new hexagono(readline("Digite o valor de um dos lados do hexágono"));
+echo number_format($hexagono->area(), 2);
