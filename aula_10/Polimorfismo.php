@@ -35,27 +35,29 @@ class elevador implements movimento {
 }
 
 
+
+
 $carro = new carro2();
 echo $carro-> mover();
 
 $carro1 = new carro2();
 echo $carro1-> mover();
 
-
+// ------------------------
 $barco = new barco();
 echo $barco-> mover();
 
 $barco1 = new barco();
 echo $barco1-> mover();
 
-
+// ------------------------
 $aviao = new aviao();
 echo $aviao-> mover();
 
 $aviao1 = new aviao();
 echo $aviao1-> mover();
 
-
+// ------------------------
 $elevador = new elevador();
 echo $elevador-> mover();
 

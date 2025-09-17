@@ -115,13 +115,13 @@ interface notificacao {
 
 class email implements notificacao {
     public function enviar() {
-        echo "Enviando email...";
+        echo "Enviando email...\n";
     }
 }
 
 class sms implements notificacao {
     public function enviar() {
-        return "Enviando SMS...";
+        return "Enviando SMS...\n";
     }
 }
 
@@ -129,7 +129,7 @@ function notificar(object $meio) {
     if (method_exists($meio, 'enviar')){
         return $meio->enviar();
     } else {
-        return "Método 'enviar' não encontrado no objeto fornecido";
+        return "Método 'enviar' não encontrado no objeto fornecido\n";
     }
 }
 
@@ -174,8 +174,61 @@ class tresNumeros implements calculadora {
 }
 
 
-// Objetos
 
+// Exercicio extra
+
+interface movel {
+    public function mover();
+}
+
+interface abastecivel{
+    public function abastecer($quantidade);
+}
+
+interface  manutenivel {
+    public function fazerManutencao();
+}
+
+
+class carro4 implements movel, abastecivel{
+
+    public function mover() {
+        return "O carro está se movendo.\n";
+    }
+
+    public function abastecer($quantidade){
+        return "O carro foi abastecido com R$ $quantidade reais.\n";
+    }
+}
+
+class bicicleta implements movel, manutenivel {
+    public function mover(){
+        return "A bicicleta está pedalando.\n";
+    }
+
+    public function fazerManutencao() {
+        return "A bicicleta foi lubrificada.\n";
+    }
+}
+
+
+class onibus implements movel, abastecivel, manutenivel {
+    public function mover() {
+        return "O ônibus está transportando passageiros.\n";
+    }
+
+    public function abastecer($quantidade) {
+        return "O ônibus abasteceu R$ $quantidade reais.\n";
+    }
+
+    public function fazerManutencao() {
+        return "O ônibus está passando por revisão.";
+    }
+}
+
+
+
+// Objetos
 $quadrado = new quadrado(5);
 echo $quadrado->area();
 
@@ -186,6 +239,7 @@ $circulo = new circulo(3);
 echo $circulo->area();
 
 
+// -------------------------
 $cachorro = new cachorro1();
 echo $cachorro->fazSom();
 
@@ -196,6 +250,7 @@ $vaca = new vaca();
 echo $vaca->fazSom();
 
 
+// -------------------------
 $carro = new carro3();
 echo $carro-> mover();
 
@@ -209,15 +264,31 @@ $elevador = new elevador1();
 echo $elevador-> mover();
 
 
+// -------------------------
 $email = new email();
-echo $email->enviar();
+echo notificar($email);
 
 $sms = new sms();
-echo $sms->enviar();
+echo notificar($sms);
+
+$teste = new aviao1();
+echo notificar($teste);
 
 
+// -------------------------
 $dois = new doisNumeros(2, 4);
 echo $dois->somar();
 
 $tres = new tresNumeros(3, 4, 4);
 echo $tres->somar();
+
+
+// -------------------------
+$carroExtra = new carro4();
+echo $carroExtra->abastecer(30), $carroExtra->mover();
+
+$bicicleta = new bicicleta();
+echo $bicicleta->mover(), $bicicleta->fazerManutencao();
+
+$onibus = new onibus();
+echo $onibus->mover(), $onibus->abastecer(150.50), $onibus->fazerManutencao();
