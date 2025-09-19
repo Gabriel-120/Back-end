@@ -285,7 +285,7 @@ echo $tres->somar();
 
 // -------------------------
 $carroExtra = new carro4();
-echo $carroExtra->abastecer(30), $carroExtra->mover();
+echo $carroExtra->abastecer(30), $carroExtra->mover();      
 
 $bicicleta = new bicicleta();
 echo $bicicleta->mover(), $bicicleta->fazerManutencao();
