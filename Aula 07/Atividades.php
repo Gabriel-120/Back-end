@@ -99,7 +99,7 @@ Echo $aluno1 -> getNota();
 
 // Exercício 4 - Encapsulamento de Produto 
 
-class produto{
+class produtos{
     private $nome1;
     private $preco;
     private $estoque;
@@ -128,7 +128,7 @@ class produto{
     }
 }
 
-$produto1 = new produto("Pão", -1.5, -10 );
+$produto1 = new produtos("Pão", -1.5, -10 );
 echo $produto1 -> exibirInfo();
 
 
