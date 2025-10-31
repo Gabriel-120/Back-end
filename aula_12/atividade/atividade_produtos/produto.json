@@ -1,13 +1,13 @@
 {
-    "4": {
-        "codigo": 4,
-        "nome": "Iorgute Grego",
-        "valor": 16.9
-    },
     "3": {
         "codigo": 3,
         "nome": "Queijo Brie",
         "valor": 19.9
+    },
+    "4": {
+        "codigo": 4,
+        "nome": "Iorgute Grego",
+        "valor": 16.9
     },
     "5": {
         "codigo": 5,

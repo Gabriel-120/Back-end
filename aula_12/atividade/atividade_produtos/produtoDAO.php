@@ -1,4 +1,5 @@
 <?php
+
 namespace Aula_12;
 
 class ProdutoDAO
@@ -63,7 +64,10 @@ class ProdutoDAO
 
     public function excluirProduto($codigo)
     {
-        unset($this->produto[$codigo]);
-        $this->salvarEmArquivo();
+        if (isset($this->produto[$codigo])) {
+            unset($this->produto[$codigo]);
+
+            $this->salvarEmArquivo();
+        }
     }
 }
