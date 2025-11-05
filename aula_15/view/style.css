@@ -1,0 +1,111 @@
+/* Estilos básicos para a página de gerenciamento de bebidas */
+:root{
+    --primary:#4CAF50;
+    --danger:#f44336;
+    --muted:#777;
+    --bg:#fafafa;
+    --card:#fff;
+    --border:#e0e0e0;
+    --max-width:980px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color:#222;
+    margin:20px;
+    display:flex;
+    justify-content:center;
+}
+.container{
+    width:100%;
+    max-width:var(--max-width);
+    background:var(--card);
+    padding:18px;
+    border:1px solid var(--border);
+    box-shadow:0 2px 6px rgba(0,0,0,0.03);
+    border-radius:6px;
+}
+h1{ margin-top:0; }
+form#bebidaForm{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    align-items:center;
+    margin-bottom:18px;
+}
+form#bebidaForm input[type="text"],
+form#bebidaForm input[type="number"],
+form#bebidaForm select{
+    padding:8px 10px;
+    border:1px solid var(--border);
+    border-radius:4px;
+    min-width:140px;
+}
+form#bebidaForm input[type="text"]{ flex:1 1 200px; }
+form#bebidaForm select{ flex:0 1 180px; }
+form#bebidaForm input[type="number"]{ width:150px; }
+button.btn{
+    padding:8px 12px;
+    border-radius:4px;
+    cursor:pointer;
+    border:0;
+}
+.btn-edit{ background:var(--primary); color:#fff; }
+.btn-delete{ background:var(--danger); color:#fff; }
+.btn-cancel{ background:var(--muted); color:#fff; }
+.btn + .btn{ margin-left:6px; }
+.hidden{ display:none !important; }
+/* Tabela */
+.table-wrap{ overflow:auto; }
+table{ border-collapse:collapse; width:100%; }
+th, td{ padding:10px 8px; border:1px solid var(--border); text-align:left; }
+th{ background:#f6f6f6; }
+.actions form{ display:inline-block; margin:0; }
+@media (max-width:720px){
+    form#bebidaForm{ flex-direction:column; align-items:stretch; }
+    form#bebidaForm input, form#bebidaForm select{ width:100%; }
+    th, td{ font-size:14px; }
+}
+
+/* Pequeno espaçamento para rodapé da página */
+.footer-space{ height:14px; }
+
+/* Melhoria visual: header simples e estilos refinados */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    margin-bottom:12px;
+}
+.logo{
+    font-weight:700;
+    color:var(--primary);
+    font-size:18px;
+}
+.subtitle{ color:#666; font-size:13px; }
+
+/* Inputs com foco */
+input:focus, select:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76,175,80,0.08);
+    border-color: var(--primary);
+}
+
+/* Botão cadastrar principal */
+#submitBtn{
+    background:var(--primary);
+    color:#fff;
+    border:0;
+}
+
+/* Tabela: zebra e hover */
+tbody tr:nth-child(odd){ background:#fff; }
+tbody tr:nth-child(even){ background:#fbfbfb; }
+tbody tr:hover{ background:#f1fff4; }
+
+/* Pequenos ajustes visuais para telas pequenas */
+@media (max-width:480px){
+    .logo{ font-size:16px; }
+    #submitBtn{ width:100%; }
+}

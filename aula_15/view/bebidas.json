@@ -1,1 +1,9 @@
-[]
+{
+    "Coca-Cola": {
+        "nome": "Coca-Cola",
+        "categoria": "Refrigerante",
+        "volume": "500ml",
+        "valor": "5.50",
+        "qtde": "10"
+    }
+}

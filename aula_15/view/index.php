@@ -27,22 +27,13 @@ $lista = $controller->ler();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de bebidas</title>
-    <style>
-        table { border-collapse: collapse; width: 100%; max-width: 900px; }
-        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-        th { background: #f2f2f2; }
-        .actions form { display: inline-block; margin: 0; }
-        .btn { padding: 6px 10px; margin-right: 4px; cursor: pointer; }
-        .btn-edit { background: #4CAF50; color: white; border: none; }
-        .btn-delete { background: #f44336; color: white; border: none; }
-        .btn-cancel { background: #777; color: white; border: none; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Gerenciamento de bebidas</h1>
 <br>
 <hr>
-</form>
+    <div class="container">
     <form id="bebidaForm" method="POST">
         <input type="hidden" name="acao" id="acao" value="salvar">
         <input type="hidden" name="nome_original" id="nome_original" value="">
@@ -61,11 +52,12 @@ $lista = $controller->ler();
         <input type="number" name="valor" id="valor" step="0.01" placeholder="Valor em Reais (R$):" required>
         <input type="number" name="qtde" id="qtde" placeholder="Quantidade em estoque:" required>
         <button type="submit" id="submitBtn">Cadastrar</button>
-        <button type="button" id="cancelBtn" class="btn btn-cancel" style="display:none;" onclick="resetForm()">Cancelar</button>
+        <button type="button" id="cancelBtn" class="btn btn-cancel hidden" onclick="resetForm()">Cancelar</button>
     </form>
 
     <h2>Lista de bebidas cadastradas</h2>
     <?php if ($lista && count($lista) > 0): ?>
+        <div class="table-wrap">
         <table>
             <thead>
                 <tr>
@@ -97,9 +89,13 @@ $lista = $controller->ler();
             <?php endforeach; ?>
             </tbody>
         </table>
+        </div>
     <?php else: ?>
         <p>Nenhuma bebida cadastrada.</p>
     <?php endif; ?>
+
+    <div class="footer-space"></div>
+    </div>
 
     <script>
         function editarBebida(nome, categoria, volume, valor, qtde) {
