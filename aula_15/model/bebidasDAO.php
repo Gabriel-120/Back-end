@@ -38,8 +38,7 @@ class bebidasDAO {
                 'qtde' => $bebidas->getQtde()
             ];
         }
-
-        file_put_contents($this->arquivo, json_encode($dados, JSON_PRETTY_PRINT));
+        file_put_contents($this->arquivo, json_encode($dados, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
     }
 
 
