@@ -1,5 +1,5 @@
 <?php
-namespace Aula_12;
+namespace aula_14;
 
 class Produto {
     private $codigo;
