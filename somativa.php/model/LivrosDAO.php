@@ -59,7 +59,7 @@ class LivrosDAO
         $stmt->execute([':titulo' => $titulo]);
     }
 
-    public function bsucarPorTitulo($titulo){
+    public function buscarPorTitulo($titulo){
         $stmt = $this->conn->prepare("SELECT * FROM Livros WHERE Titulo = :titulo LIMIT 1");
         $stmt->execute([':titulo' => $titulo]);
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
