@@ -1,12 +1,4 @@
 <?php
-/**
- * View: Painel de gerenciamento de livros (Somativa)
- * - Exibe formulário para criar/editar livros
- * - Mostra a lista de livros cadastrados com ações de editar/deletar
- * - Faz POST para a própria página e usa o controller para operações
- *
- * Estrutura inspirada no index.php da aula_16 (comentários e organização)
- */
 require_once __DIR__ . '/../controller/Controller.php';
 
 // Instancia o controller responsável pelas operações
